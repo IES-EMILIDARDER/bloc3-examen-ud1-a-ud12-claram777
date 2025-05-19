@@ -14,5 +14,6 @@ class Vehicle {
         this.any = any;
         this.preu = preu;
     }
+    
 
 }
