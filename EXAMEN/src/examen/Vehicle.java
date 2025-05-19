@@ -17,6 +17,18 @@ class Vehicle {
         this.preu = preu;
     }
 
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
     public int getAny() {
         return any;
     }
