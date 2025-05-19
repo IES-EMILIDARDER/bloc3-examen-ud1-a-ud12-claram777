@@ -19,7 +19,7 @@ public class Main1 {
         
         try (Stream<String> linies = Files.lines(Paths.get("c:\\temp\\vehicles.csv"))) {
             List<Vehicle> v1 = 
-                    (List<Vehicle>) linies.filter(linia -> !linia.startsWith("#") && !linia.isBlank())
+                    linies.filter(linia -> !linia.startsWith("#") && !linia.isBlank())
                         .map(linia -> linia.split(","))
                         .filter(parts -> Integer.valueOf(parts[3].trim()) >= 2014)
                         .distinct()
@@ -33,22 +33,7 @@ public class Main1 {
                         ))
                         .collect(Collectors.toList());
             
-            v1.forEach(System.out::println);
-                    
-                    
-//                    linies.filter(linia -> !linia.startsWith("#") && !linia.isBlank())
-//                    .map(linia -> linia.split(","))
-//                    .sorted((x, y) -> x[1].compareTo(y[1]))
-//                    .map(parts -> new Clients (
-//                            Integer.valueOf(parts[0].trim()),
-//                            parts[1].trim(),
-//                            parts[2].trim()
-//                    ))
-//                    .collect(Collectors.toList());
-//            
-//            client.forEach(n -> System.out.println(n));
-                    
-                    
+            v1.forEach(System.out::println);       
             
         } catch (Exception e) {
             System.err.println(e.getMessage());

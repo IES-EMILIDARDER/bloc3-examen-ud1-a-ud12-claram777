@@ -21,6 +21,10 @@ class Vehicle {
         return any;
     }
 
+    public double getPreu() {
+        return preu;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
