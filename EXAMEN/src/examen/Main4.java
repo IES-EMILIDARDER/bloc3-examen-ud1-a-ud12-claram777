@@ -22,7 +22,6 @@ public class Main4 {
                     Prepared Statements" o "Instruccions concatenades" en previsió de l'existència d'un paràmetre "any >= ?"
         */
         
-        
     }
     
     public void leerVehiculos (String ruta) {
@@ -36,8 +35,12 @@ public class Main4 {
         String sql = "SELECT matricula, marca, model, any, preu FROM Vehicle where any >= ?";
         
         try (   Connection conn = gestorBSD.getConnectionFromFile();
-                ResultSet resultSet = gestorBSD.executaQuerySQL(conn, sql, 2020) ) {
-            
+//                ResultSet resultSet = gestorBSD.executaQuerySQL(conn, sql, 2020) 
+                PreparedStatement stmt = conn.prepareStatement(sql)
+                ) {
+                    stmt.setInt(1, 2020);
+                    
+                try (ResultSet resultSet = stmt.executeQuery()) {
                     while (resultSet.next()) {
                         agregarVehiculos(v1, new Vehicle (
                                 
@@ -49,6 +52,10 @@ public class Main4 {
                                 
                         ));
                     }
+                
+                } catch (Exception e) {
+                    System.err.println(e.getMessage());
+                }
             
         } catch (Exception e) {
             System.err.println(e.getMessage());

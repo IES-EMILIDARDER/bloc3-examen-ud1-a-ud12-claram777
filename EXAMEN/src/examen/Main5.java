@@ -21,9 +21,7 @@ NOTA: no cal crear la taula.
             new Vehicle("8765-MNO", "Hyundai",  "Ioniq 5", 2023, 42000),
             new Vehicle("2109-PQR", "Peugeot",  "308",     2016, 14000)
         );
-        
-        
-        
+
         
     }
     
