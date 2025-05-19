@@ -1,6 +1,8 @@
 package examen;
 
 import java.util.Objects;
+import java.util.function.BiFunction;
+import java.util.function.Function;
 
 class Vehicle {
     private String matricula;
@@ -65,7 +67,11 @@ class Vehicle {
 
     @Override
     public String toString() {
-        return "Vehicle{" + "matricula=" + matricula + ", marca=" + marca + ", model=" + model + ", any=" + any + ", preu=" + preu + '}';
+        return "\nVehicle{" + "matricula=" + matricula + ", marca=" + marca + ", model=" + model + ", any=" + any + ", preu=" + preu + '}';
+    }
+    
+    public Function<Vehicle, Vehicle> incrementaPreu1 (Vehicle v) {
+        return null;
     }
     
 }

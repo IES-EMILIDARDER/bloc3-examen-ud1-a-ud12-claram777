@@ -21,7 +21,7 @@ public class Main4 {
             NOTA: cal fer una SELECT amb paràmetres, emprant "
                     Prepared Statements" o "Instruccions concatenades" en previsió de l'existència d'un paràmetre "any >= ?"
         */
-
+        
         
     }
     
@@ -29,7 +29,7 @@ public class Main4 {
         LeerVehiculos(v1);
         LeerVehiculos(v1, ruta);
         
-        System.out.println(v1.toString());
+        System.out.println("\n" + v1.toString());
     }
     
     private void LeerVehiculos (Set<Vehicle> v1) {

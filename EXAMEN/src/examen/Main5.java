@@ -23,6 +23,8 @@ NOTA: no cal crear la taula.
         );
         
         
+        
+        
     }
     
     private void insertUpdateVehicles (List<Vehicle> vehicles) {
